@@ -1,3 +1,5 @@
-*{
-    box-sizing: border-box;
-}
+@import "./utils/variables";
+@import "./utils/functions";
+
+@import "./bases/reset";
+@import "./bases/font";
