@@ -1,0 +1,13 @@
+.title{
+    &__1{
+        @include fonts(principal-title);
+    }
+    &__2{
+        @include fonts(second-title);
+        padding-top: 3.6rem ;
+        margin-bottom: 1.8rem;
+    }
+    &__3{
+        @include fonts(third-title);
+    }
+}

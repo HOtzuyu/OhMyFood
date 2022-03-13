@@ -1,0 +1,4 @@
+main{
+    padding-top: map-get($map: $header-height, $key: mobile);
+
+}

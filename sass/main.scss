@@ -1,5 +1,17 @@
 @import "./utils/variables";
-@import "./utils/functions";
+@import "./utils/maps";
+/*@import "./utils/functions";*/
+@import "./utils/mixins";
 
 @import "./bases/reset";
 @import "./bases/font";
+
+@import "./components/logo";
+@import "./components/pictos";
+@import "./components/titles";
+
+@import "./layouts/header";
+@import "./layouts/main";
+@import "./layouts/footer";
+
+@import "./pages/resto-card";

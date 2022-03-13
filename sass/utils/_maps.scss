@@ -1,0 +1,31 @@
+$fonts: (
+    principal-title: (
+        family : $font-1,
+        size : 1.5rem,
+        colour : $colour-black,
+    ),
+    second-title: (
+        family : $font-1,
+        size : 1.5rem,
+        colour : $colour-black,
+    ),
+    third-title: (
+        family : $font-1,
+        size : 1rem,
+        colour : $colour-black,
+    ),
+    text: (
+        family : $font-2,
+        size : 1rem,
+        colour : $colour-black,
+    ),
+    text-2: (
+        family : $font-2,
+        size : 1rem,
+        colour : $colour-white,
+    )
+);
+
+$header-height: (
+    mobile: 4rem,
+)

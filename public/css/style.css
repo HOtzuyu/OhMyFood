@@ -1,4 +1,6 @@
-/* fonction for font */
+/*@import "./utils/functions";*/
+/* logo color change depend of the background */
+/* font change depend the situation */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap");
 *, *::after, *::before {
   margin: 0;
@@ -8,21 +10,138 @@
 
 html, body {
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 /* Import Google Font */
 /* Display font */
-body {
+a {
+  text-decoration: none;
   font-family: "Roboto", sans-serif;
-  color: #9356dc;
-  font-size: 16px;
-  font-weight: 100;
-  line-height: 1.7;
+  font-size: 1rem;
+  color: #000;
 }
 
-h1, h2, h3, h4 {
+.picto__desc {
+  font-size: 1.5rem;
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+  -webkit-text-stroke-color: #000;
+  -webkit-text-stroke-width: 2px;
+}
+.picto__desc:hover {
+  -webkit-text-fill-color: #9256dc;
+  -webkit-text-stroke-color: #9256dc;
+}
+
+.title__1 {
   font-family: "Shrikhand", cursive;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  color: #000;
+}
+.title__2 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.5rem;
+  color: #000;
+  padding-top: 3.6rem;
+  margin-bottom: 1.8rem;
+}
+.title__3 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1rem;
+  color: #000;
+}
+
+/* Header */
+header {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  /* left arrow*/
+}
+header .back {
+  position: absolute;
+  left: 3%;
+}
+header .back.disable {
+  display: none;
+}
+header .logo {
+  width: 10rem;
+}
+
+main {
+  padding-top: 4rem;
+}
+
+/* change general footer */
+footer {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+}
+footer .logo {
+  width: 5.8rem;
+  filter: invert(100);
+}
+
+/* Footer Link */
+.footer {
+  display: flex;
+  flex-direction: column;
+  /*&__logo{
+      filter: invert(100);
+  };*/
+}
+.footer__picto {
+  color: #fff;
+}
+.footer__info {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+}
+.footer__info:active {
+  filter: brightness(50);
+}
+
+.restaurants {
+  background-color: #ebf9f6;
+  padding: 0 1.25rem 3.6rem 1.25rem;
+}
+
+.restaurant > * {
+  margin-top: 1.18rem;
+}
+
+.restaurant-card {
+  width: 100%;
+  height: 15.5rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  -webkit-box-shadow: 4px 4px 15px 5px rgba(0, 0, 0, 0.18);
+  box-shadow: 4px 4px 15px 5px rgba(0, 0, 0, 0.18);
+}
+.restaurant-card__pic {
+  width: 100%;
+  height: 11rem;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+.restaurant-card__desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  flex: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

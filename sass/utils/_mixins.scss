@@ -1,0 +1,28 @@
+/* logo color change depend of the background */
+@mixin logo-colour($colour: $colour-black){
+    @if (lightness($colour)<30){
+        $colour: 100;
+    }@else{
+        $colour: 0;
+    }    
+    filter: invert($colour);
+}
+
+/* font change depend the situation */
+@mixin fonts($state){
+    $divers: map-get($fonts, $state );
+    font-family: map-get($divers, family);
+    font-size: map-get($divers, size);
+    color: map-get($divers, colour);
+}
+
+
+//lighter color
+@mixin bg-light($colour: $colour-tertiary){
+    @if ( lightness($colour) < 25% ) {
+        $colour: 24%;
+    }@else{
+        $colour: 95%;
+    }
+    background-color: hsl(165, 56%, $colour);
+  }

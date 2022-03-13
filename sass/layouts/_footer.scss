@@ -1,0 +1,30 @@
+/* change general footer */
+footer{
+    background-color: $colour-black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    .logo{
+        width: 5.8rem;
+        @include logo-colour($colour: $colour-black);
+    }
+}
+
+/* Footer Link */
+.footer{
+    display: flex;
+    flex-direction: column;
+    /*&__logo{
+        filter: invert(100);
+    };*/
+    &__picto{
+        color: $colour-white;
+    }
+    &__info{
+        @include fonts(text-2);
+        &:active{
+            filter: brightness(50);
+        }
+    }
+}

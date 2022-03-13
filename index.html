@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ohmyfood</title>
 
+        <!-- favicon -->
     <link rel="shortcut icon" href="./images/favicon/favicon.png" type="image/x-icon">
 
+    <!-- link CSS -->
     <link rel="stylesheet" href="./public/css/style.css">
 
     <!-- link fontawesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
     <section class="loader">
@@ -20,7 +23,7 @@
     </section>
     <!-- start header -->
     <header>        
-        <a href="./index.html" class="back"><i class="fa-solid fa-left-long picto picto__arrow back__arrow"></i></a>
+        <a href="./index.html" class="back disable"><i class="fa-solid fa-left-long back__picto"></i></a>
         <img src="./images/logo/ohmyfood.png" alt="logo ohmyfood" class="logo">
     </header>
     <main>
@@ -30,103 +33,114 @@
                 <label for="search" class="form__location">
                     <i class="fas fa-map-marker-alt picto picto__location"></i>
                 </label>
-                <input class="form__search" type="search" id="search" value="Paris, Belleville" placeholder="Votre adresse">
+                <input type="search" value="Paris, Bellevile" placeholder="Votre adresse" id="search" class="form__search">
             </form>
         </section>
         <!-- Header text -->
         <section class="intro">
             <h1 class="intro__title title title__1">Réservez le menu qui vous convient</h1>
             <p class="text intro__text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <button class="button intro__button"><a href="#" class="link intro__link">Explorer nos restaurants</a></button>
+            <button class="button intro__button"><a href="#" class="link button__link">Explorer nos restaurants</a></button>
         </section>
         <!-- TUTORIAL -->
         <section class="tuto">
-            <h2 class="tuto__title">Fonctionnement</h2>
+            <h2 class="tuto__title title__2">Fonctionnement</h2>
             <div class="tuto--flex">
-                <div class="tuto__card">
-                    <div class="number">
+                <div class="tuto-card">
+                    <div class="tuto-card__number">
                         <p>1</p>
                     </div>
-                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <i class="fa-solid fa-mobile-screen-button tuto-card__picto picto picto__tuto"></i>
                     <p>Choisissez un restaurant</p>
                 </div>
-                <div class="tuto__card">
-                    <div class="number">
+                <div class="tuto-card">
+                    <div class="tuto-card__number">
                         <p>2</p>
                     </div>
-                    <i class="fa-solid fa-list"></i>
+                    <i class="fa-solid fa-list tuto-card__picto picto picto__tuto"></i>
                     <p>Composez votre menu</p>
                 </div>
-                <div class="tuto__card">
-                    <div class="number">
+                <div class="tuto-card">
+                    <div class="tuto-card__number">
                         <p>3</p>
                     </div>
-                    <i class="fa-solid fa-store"></i>
+                    <i class="fa-solid fa-store tuto-card__picto picto picto__tuto"></i>
                     <p>Dégustez au restaurant</p>
                 </div>
             </div>
         </section>
         <!-- RESTAURANTS -->
-        <section>
+        <section class="restaurants">
             <h2 class="title title__2">Restaurants</h2>
             <div class="restaurant">
-                <a href="#" class="restaurant__flex">
-                    <img src="./images/restaurants/La_palette_du_Gout.jpg" alt="Le restaurant La palette du gout">
-                    <div>
-                        <div>
-                            <h3 class="title title__3">La palette du goût</h3>
-                            <p>Ménilmontant</p>  
+                <a href="#" class="restaurant__flex restaurant-card">
+                    <img src="./images/restaurants/La_palette_du_Gout.jpg" alt="Le restaurant La palette du gout" class=" restaurant-card__pic">
+                    <div class="restaurant-card__desc">
+                        <div class="desc">
+                            <h3 class="title title__3 desc__title">La palette du goût</h3>
+                            <p class="desc__text">Ménilmontant</p>  
                         </div>
-                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-heart picto picto__desc desc__picto"></i>
                     </div>                
                 </a>
-                <a href="#" class="restaurant__flex">
-                    <img src="./images/restaurants/La_note_Enchantee.jpg" alt="Le restaurant La note enchantée">
-                    <div>
-                        <div>
-                            <h3 class="title title__3">La note enchantée</h3>
-                            <p>Charonne</p>  
+                <a href="#" class="restaurant__flex restaurant-card">
+                    <img src="./images/restaurants/La_note_Enchantee.jpg" alt="Le restaurant La note enchantée" class=" restaurant-card__pic">
+                    <div class="restaurant-card__desc">
+                        <div class="desc">
+                            <h3 class="title title__3 desc__title">La note enchantée</h3>
+                            <p class="desc__text">Charonne</p>  
                         </div>
-                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-heart picto picto__desc desc__picto"></i>
                     </div>                
                 </a>
-                <a href="#" class="restaurant__flex">
-                    <img src="./images/restaurants/A_la_Francaise.jpg" alt="Le restaurant À la française">
-                    <div>
-                        <div>
-                            <h3 class="title title__3">À la française</h3>
-                            <p>Cité Rouge</p>  
+                <a href="#" class="restaurant__flex restaurant-card">
+                    <img src="./images/restaurants/A_la_Francaise.jpg" alt="Le restaurant À la française" class=" restaurant-card__pic">
+                    <div class="restaurant-card__desc">
+                        <div class="desc">
+                            <h3 class="title title__3 desc__title">À la française</h3>
+                            <p class="desc__text">Cité Rouge</p>  
                         </div>
-                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-heart picto picto__desc desc__picto"></i>
                     </div>                
                 </a>
-                <a href="#" class="restaurant__flex">
-                    <img src="./images/restaurants/Le_delice_des_sens.jpg" alt="Le restaurant Le délice des sens">
-                    <div>
-                        <div>
-                            <h3 class="title title__3">Le délice des sens</h3>
-                            <p>Folie-Méricourt</p>  
+                <a href="#" class="restaurant__flex restaurant-card">
+                    <img src="./images/restaurants/Le_delice_des_sens.jpg" alt="Le restaurant Le délice des sens" class=" restaurant-card__pic">
+                    <div class="restaurant-card__desc">
+                        <div class="desc">
+                            <h3 class="title title__3 desc__title">Le délice des sens</h3>
+                            <p class="desc__text">Folie-Méricourt</p>  
                         </div>
-                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-heart picto picto__desc desc__picto"></i>
                     </div>                
                 </a>            
             </div>
         </section>
     </main>
     <footer>
-        <div>
-            <img src="./images/logo/ohmyfood.png" alt="logo ohmyfood" class="logo--blanc">
-            <div>
-                <i class="fa-solid fa-utensils"></i>
-                <a href="#">Proposer un restaurants</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-handshake-angle"></i>
-                <a href="#">Devenir partenaire</a>
-            </div>
-            <a href="#">Mentions légales</a>
-            <a href="mailto:contact@ohmyfood.fr">Contact</a>
-        </div>
+        <ul class="footer">
+            <li>
+                <img src="./images/logo/ohmyfood.png" alt="logo ohmyfood" class="logo">
+            </li>
+            <li class=" info--flex">
+                <a href="#" class="footer__info">
+                    <i class="fa-solid fa-utensils picto picto__footer footer__picto"></i>
+                    <span>Proposer un restaurants</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="footer__info">
+                    <i class="fa-solid fa-handshake-angle picto picto__footer footer__picto"></i>
+                    <span>Devenir partenaire</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="footer__info">Mentions légales</a>
+            </li>
+            <li>
+                <a href="mailto:contact@ohmyfood.fr" class="footer__info">Contact</a>
+            </li>
+            
+        </ul>
     </footer>
 </body>
 </html>

@@ -1,0 +1,23 @@
+/* Header */
+header{
+    background-color: $colour-white;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: map-get($header-height, mobile);
+    
+    /* left arrow*/
+    .back{
+        position: absolute;
+        left: 3%;
+        &.disable{
+            display : none
+        }
+    }
+
+    .logo{
+        width: 10rem;
+    }
+}

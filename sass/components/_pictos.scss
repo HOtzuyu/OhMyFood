@@ -1,0 +1,16 @@
+.picto{
+
+    //heart
+    &__desc{
+        font-size: 1.5rem;
+        color: $colour-white;
+        -webkit-text-fill-color: $colour-white;
+        -webkit-text-stroke-color: $colour-black;
+        -webkit-text-stroke-width: 2.00px;
+        // animation need amelioration 
+        &:hover{
+            -webkit-text-fill-color: $colour-primary;
+            -webkit-text-stroke-color: $colour-primary;
+        }
+    }
+}
