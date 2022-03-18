@@ -1,4 +1,11 @@
 main{
     padding-top: map-get($map: $header-height, $key: mobile);
-
+    @include mobile-first{
+        padding-top: map-get($map: $header-height, $key: tablette);
+    }
+    @include desktop{
+        padding-top: map-get($map: $header-height, $key: desktop);
+        
+    }
 }
+

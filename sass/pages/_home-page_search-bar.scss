@@ -1,0 +1,39 @@
+.place{
+    height: 3.12rem;
+    @include bg-medium($colour-tertiary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include text-medium();
+    @include mobile-first{
+        height: 4rem;
+    }
+    
+}
+
+.form{
+    width: auto;    
+    &__search{
+        width: 7rem;
+        border: none;
+        background-color: transparent;
+        font-family: $font-2;
+        font-weight: bold;
+        text-overflow: ellipsis;
+        text-align: center;
+        &:focus-visible{
+            outline:none;
+        }
+        @include mobile-first{
+            width: 21rem;
+            font-size: 1.2rem;
+        }
+        @include desktop{
+            text-align: start;
+            margin-left: 1rem;
+        }
+    }
+    @include desktop{
+        width: 1200px;   
+    }
+}

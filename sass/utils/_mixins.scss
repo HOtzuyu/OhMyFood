@@ -1,28 +1,108 @@
-/* logo color change depend of the background */
-@mixin logo-colour($colour: $colour-black){
-    @if (lightness($colour)<30){
+// logo color change depend of the background
+@mixin logo-colour($colour: $colour-black) {
+    @if (lightness($colour)<30) {
         $colour: 100;
-    }@else{
+    }
+
+    @else {
         $colour: 0;
-    }    
+    }
+
     filter: invert($colour);
 }
 
-/* font change depend the situation */
-@mixin fonts($state){
-    $divers: map-get($fonts, $state );
+// font change depend the situation
+@mixin fonts($state) {
+    $divers: map-get($fonts, $state);
     font-family: map-get($divers, family);
     font-size: map-get($divers, size);
     color: map-get($divers, colour);
+    line-height: map-get($divers, line-height);
 }
 
 
 //lighter color
-@mixin bg-light($colour: $colour-tertiary){
-    @if ( lightness($colour) < 25% ) {
+@mixin bg-light($colour: $colour-tertiary) {
+    @if (lightness($colour) < 25%) {
         $colour: 24%;
-    }@else{
+    }
+
+    @else {
         $colour: 95%;
     }
+
     background-color: hsl(165, 56%, $colour);
-  }
+}
+
+@mixin bg-light-b($colour: $colour-primary) {
+    @if (lightness($colour) < 25%) {
+        $colour: 1%;
+    }
+
+    @else {
+        $colour: 80%;
+    }
+
+    background-color: hsl(267, 66%, $colour);
+}
+
+
+
+//medium color
+@mixin bg-medium($colour: $colour-tertiary) {
+    @if (lightness($colour) < 25%) {
+        $colour: 24%;
+    }
+
+    @else {
+        $colour: 80%;
+    }
+
+    background-color: hsl(165, 56%, $colour);
+}
+
+
+
+//medium color text
+@mixin text-medium($colour: $colour-black) {
+    @if (lightness($colour) < 25%) {
+        $colour: 24%;
+    }
+
+    @else {
+        $colour: 80%;
+    }
+
+    color: hsl(0, 0%, $colour);
+}
+
+//light color text
+@mixin text-light($colour: $colour-black) {
+    @if (lightness($colour) < 25%) {
+        $colour: 24%;
+    }
+
+    @else {
+        $colour: 60%;
+    }
+
+    color: hsl(0, 0%, $colour);
+}
+
+//padding
+@mixin padding-section($size) {
+    $mesure: map-get($paddings, $size);
+    padding: map-get($mesure, padding);
+}
+
+//breakpoints
+@mixin mobile-first{
+    @media screen and (min-width : map-get($breakpoints, mobile)){
+        @content;
+    }
+}
+@mixin desktop{
+    @media screen and (min-width : map-get($breakpoints, desktop)){
+        @content;
+    }
+}

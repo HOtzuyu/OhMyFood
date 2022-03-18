@@ -10,4 +10,17 @@
     &__3{
         @include fonts(third-title);
     }
+    @include mobile-first{
+        &__1{
+            @include fonts(principal-title_tab);
+        }
+        &__2{
+            @include fonts(second-title_tab);
+            padding-top: 3.6rem ;
+            margin-bottom: 1.8rem;
+        }
+        &__3{
+            @include fonts(third-title_tab);
+        }
+    }
 }

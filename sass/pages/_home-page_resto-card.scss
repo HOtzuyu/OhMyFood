@@ -1,0 +1,90 @@
+.restaurants{
+    @include bg-light($colour-tertiary);
+    @include padding-section(mobile);
+    @include desktop{
+        @include padding-section(desktop);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.restaurant{
+    &>*{
+        margin-top: 1.18rem;
+    }
+    @include desktop{
+        width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+.restaurant-card{
+    width: 100%;
+    height: 15.5rem;
+    background-color: $colour-white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    -webkit-box-shadow: 4px 4px 15px 5px rgba(0,0,0,0.18); 
+    box-shadow: 4px 4px 15px 5px rgba(0,0,0,0.18);
+    position: relative;
+    @include mobile-first{
+        flex-direction: row;
+    }
+    &__new{
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        @include bg-medium;
+        padding: 0.3rem 0.5rem;
+        border-radius: 0.2rem;
+        @include mobile-first{
+            right: auto;
+            left: 0.5rem;
+        }
+        &.disable{
+            display: none;
+        }
+    }
+    &__pic{
+        width: 100%;
+        height: 11rem;
+        object-fit: cover;
+        border-radius: 1rem 1rem 0 0;
+        @include mobile-first{
+            width: 60%;
+            height: 100%;
+            border-radius: 1rem 0 0 1rem;
+        }
+    }
+    &__desc{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+        flex: 1;
+        @include mobile-first{
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: baseline;
+        }
+    }
+
+    @include desktop{
+        width: 45%;
+        height: 33.68rem;
+        flex-direction: column;
+        &__pic{
+            width: 100%;
+            height: 70%;
+            border-radius: 1rem 1rem 0 0;
+        }
+    }
+}
+
+.desc{
+    &__picto{
+        align-self: end;
+    }
+}

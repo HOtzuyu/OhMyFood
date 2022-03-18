@@ -1,0 +1,134 @@
+.menu {
+    background-color: $colour-white;
+    margin-top: -8rem;
+    @include padding-section(mobile);
+    padding-top: 2.4rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__top {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        @include desktop{
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__button {
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    
+    
+}
+
+.section-menu {
+    >* {
+        margin-top: 1rem;
+    }
+
+    width: 100%;
+    @include desktop{
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
+
+
+.dishe-card {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 4.26rem;
+    background-color: $colour-white;
+    cursor: pointer;
+    background-color: $colour-white;
+    border-radius: 1rem;
+    -webkit-box-shadow: 4px 4px 15px 5px rgba(0, 0, 0, 0.18);
+    box-shadow: 4px 4px 15px 5px rgba(0, 0, 0, 0.18);
+
+
+    &__desc {
+        width: 75%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 1rem;
+        transition: all 800ms;
+
+        & h3 {
+            font-family: $font-2;
+        }
+
+        & p {
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 0.9rem;
+        }
+    }
+
+    &__prix {
+        width: 25%;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        justify-content: end;
+        font-weight: bold;
+        margin-right: 1rem;
+        transition: all 800ms;
+
+    }
+
+    &__check {
+        width: 0;
+        display: none;
+        @include bg-medium();
+        transition: all 800ms;
+    }
+
+    &:hover .dishe-card__desc {
+        width: 50%;
+    }
+
+    &:hover .dishe-card__check {
+        width: 25%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0 1rem 1rem 0;
+        
+    }
+    &:hover .dishe-card__check i{
+        animation: loop 1000ms ease-in-out;
+    }
+
+}
+
+
+@keyframes loop {
+    from{
+        rotate: 0deg;
+    }
+    to{
+        rotate: 360deg;
+    }
+}
+

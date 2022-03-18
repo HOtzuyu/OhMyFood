@@ -1,0 +1,17 @@
+.background-pic{
+    background-image: url(/public/images/restaurants/La_palette_du_Gout.jpg);
+    height: 40vh;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    
+        @include desktop{
+            background-size: cover;
+            background-attachment: fixed;
+            background-position:bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+    
+    }
+}

@@ -1,31 +1,58 @@
-$fonts: (
-    principal-title: (
-        family : $font-1,
+$fonts: (principal-title: (family : $font-1,
+        size : 1.5rem,
+        colour : $colour-black,
+        line-height : 1.2rem,
+    ),
+    second-title: (family : $font-1,
         size : 1.5rem,
         colour : $colour-black,
     ),
-    second-title: (
-        family : $font-1,
+    third-title: (family : $font-1,
+        size : 1rem,
+        colour : $colour-black,
+    ),
+    text: (family : $font-2,
+        size : 1rem,
+        colour : $colour-black,
+    ),
+    text-2: (family : $font-2,
+        size : 1rem,
+        colour : $colour-white,        
+    ),
+    principal-title_tab: (family : $font-1,
+        size : 2rem,
+        colour : $colour-black,
+        line-height : 1.2rem,
+    ),
+    second-title_tab: (family : $font-1,
+        size : 2rem,
+        colour : $colour-black,
+    ),
+    third-title_tab: (family : $font-1,
         size : 1.5rem,
         colour : $colour-black,
     ),
-    third-title: (
-        family : $font-1,
-        size : 1rem,
+    text_tab: (family : $font-2,
+        size : 1.2rem,
         colour : $colour-black,
     ),
-    text: (
-        family : $font-2,
-        size : 1rem,
-        colour : $colour-black,
-    ),
-    text-2: (
-        family : $font-2,
-        size : 1rem,
+    text-2_tab: (family : $font-2,
+        size : 1.2rem,
         colour : $colour-white,
     )
 );
 
-$header-height: (
-    mobile: 4rem,
+$header-height: (mobile: 4rem,
+tablette: 5.05rem,
+desktop: 8.8rem,
+);
+
+$paddings: (mobile : (padding: 0 1.25rem 3.87rem 1.25rem,
+    ),
+    desktop : (padding: 0 0 3.87rem 0,
+    ),
+);
+
+$breakpoints:(mobile : 762px,
+    desktop : 1220px,
 )

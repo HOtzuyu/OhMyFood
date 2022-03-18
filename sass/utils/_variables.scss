@@ -1,8 +1,9 @@
 $colour-primary:hsl(267, 66%, 60%);
 $colour-secondary:hsl(317, 100%, 74%);
 $colour-tertiary:hsl(165, 56%, 74%);
-$colour-black:#000;
-$colour-white:#fff;
+$colour-black:hsl(0, 0%, 0%);
+$colour-white:hsl(0, 0%, 100%);
+$colour-gradiant: linear-gradient(0deg, hsl(267, 66%, 60%) 0%, hsl(267, 66%, 90%) 100%);
 
 $font-1:'Shrikhand', cursive;
 $font-2:'Roboto', sans-serif;

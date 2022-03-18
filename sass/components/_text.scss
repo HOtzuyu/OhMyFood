@@ -1,0 +1,13 @@
+.text{
+    @include fonts(text);
+    @include mobile-first{
+        @include fonts(text_tab);
+    }
+}
+
+.text-2{
+    @include fonts(text-2);
+    @include mobile-first{
+        @include fonts(text-2_tab);
+    }
+}

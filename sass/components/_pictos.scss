@@ -1,7 +1,20 @@
 .picto{
 
+    //search
+    &__location{
+        @include mobile-first{
+            font-size: 1.2rem;
+        }
+    }
+    //tuto
+    &__tuto{
+        @include text-medium();
+        @include mobile-first{
+            font-size: 3rem;
+        }
+    }
     //heart
-    &__desc{
+    &__desc, &__menu{
         font-size: 1.5rem;
         color: $colour-white;
         -webkit-text-fill-color: $colour-white;
@@ -12,5 +25,26 @@
             -webkit-text-fill-color: $colour-primary;
             -webkit-text-stroke-color: $colour-primary;
         }
+        &:active{
+            -webkit-text-fill-color: $colour-primary;
+            -webkit-text-stroke-color: $colour-primary;
+        }
+        @include mobile-first{
+            font-size: 2.5rem;
+        }
     }
+
+    //check
+    &__check{
+        font-size: 2rem;
+        color: $colour-white;
+    }
+    
+    //footer
+    &__footer{
+        font-size: 1rem;
+        margin-right: 1rem;
+    }
+    
+
 }

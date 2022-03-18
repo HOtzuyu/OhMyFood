@@ -1,0 +1,81 @@
+.tuto {
+    @include padding-section(mobile);
+
+    &--flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &>* {
+            margin-top: 1.5rem;
+        }
+
+        @include mobile-first{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+    }
+
+    @include desktop{
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        @include padding-section(desktop);
+    }
+
+
+}
+
+.tuto-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    height: 4.25rem;
+    border-radius: 1rem;
+    -webkit-box-shadow: 4px 4px 15px 5px rgba(0, 0, 0, 0.18);
+    box-shadow: 4px 4px 15px 5px rgba(0, 0, 0, 0.18);
+    position: relative;
+    
+    &__number {
+        position: absolute;
+        left: -0.5rem;
+        background-color: $colour-primary;
+        width: 1.5rem;
+        height: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5rem;
+        @include mobile-first{
+            left: auto;
+            bottom: -1.5rem;
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+
+    & .text {
+        font-weight: bold;
+    }
+
+    &:nth-child(3) {
+        @include bg-light-b;
+    }
+    
+    @include mobile-first{
+        width: 14.3rem;
+        height: 13.25rem;
+        flex-direction: column; 
+    }
+
+    @include desktop{
+        width: 21.8rem;
+        height: 6.75rem;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0.5rem;
+    }
+}

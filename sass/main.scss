@@ -6,12 +6,24 @@
 @import "./bases/reset";
 @import "./bases/font";
 
-@import "./components/logo";
+//@import "./components/logo";
 @import "./components/pictos";
 @import "./components/titles";
+@import "./components/text";
+@import "./components/buttons";
 
 @import "./layouts/header";
 @import "./layouts/main";
 @import "./layouts/footer";
+@import "./layouts/loader";
 
-@import "./pages/resto-card";
+//HOME PAGE
+@import "./pages/home-page_search-bar";
+@import "./pages/home-page_intro";
+@import "./pages/home-page_tuto";
+@import "./pages/home-page_resto-card";
+
+//RESTAURANTS
+@import "./pages/restaurant_back-pic";
+@import "./pages/restaurant_menu";
+@import "./pages/restaurant_aimation-fade";
