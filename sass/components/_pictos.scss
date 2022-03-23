@@ -1,50 +1,89 @@
-.picto{
+.picto {
+
+    //back arrow
+    &__back{
+        font-weight: bolder;
+        font-size: 1.5rem;
+        &:hover{
+            color: $colour-tertiary;
+        }
+    }
 
     //search
-    &__location{
-        @include mobile-first{
+    &__location {
+        @include mobile-first {
             font-size: 1.2rem;
         }
     }
+
     //tuto
-    &__tuto{
+    &__tuto {
         @include text-medium();
-        @include mobile-first{
+
+        @include mobile-first {
             font-size: 3rem;
         }
     }
+
     //heart
-    &__desc, &__menu{
+    &__desc,
+    &__menu {
         font-size: 1.5rem;
         color: $colour-white;
         -webkit-text-fill-color: $colour-white;
         -webkit-text-stroke-color: $colour-black;
         -webkit-text-stroke-width: 2.00px;
+        transform: scale(1);
+
         // animation need amelioration 
-        &:hover{
+        &:hover {
             -webkit-text-fill-color: $colour-primary;
             -webkit-text-stroke-color: $colour-primary;
+            animation: heart 500ms ease-in-out;
         }
-        &:active{
+
+        &:active {
             -webkit-text-fill-color: $colour-primary;
             -webkit-text-stroke-color: $colour-primary;
+
         }
-        @include mobile-first{
+
+        @include mobile-first {
             font-size: 2.5rem;
         }
     }
 
+    &__desc{
+        @include desktop {
+            align-self: end;
+        }
+    }
+
     //check
-    &__check{
+    &__check {
         font-size: 2rem;
         color: $colour-white;
     }
-    
+
     //footer
-    &__footer{
+    &__footer {
         font-size: 1rem;
         margin-right: 1rem;
     }
-    
 
+
+}
+
+@keyframes heart {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }

@@ -96,13 +96,35 @@
 }
 
 //breakpoints
-@mixin mobile-first{
-    @media screen and (min-width : map-get($breakpoints, mobile)){
+@mixin mobile-first {
+    @media screen and (min-width : map-get($breakpoints, mobile)) {
         @content;
     }
 }
-@mixin desktop{
-    @media screen and (min-width : map-get($breakpoints, desktop)){
+
+@mixin desktop {
+    @media screen and (min-width : map-get($breakpoints, desktop)) {
         @content;
+    }
+}
+
+//btn
+@mixin shadow($x,$y,$radius) {
+    box-shadow: $x+px $y+px $radius+px rgba(0, 0, 0, 0.219);
+}
+
+@mixin btn {
+    border: none;
+    border-radius: 20px;
+    width: 180px;
+    height: 40px;
+    padding: 5px 15px;
+    cursor: pointer;
+    background: linear-gradient(to top left,$colour-primary,35%,$colour-secondary);
+    @include shadow(1,1,5);
+    transition: all 500ms;
+    &:hover,&:active {
+        @include shadow(4,4,6);
+        opacity: 0.9;
     }
 }

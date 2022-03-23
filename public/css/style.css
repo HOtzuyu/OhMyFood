@@ -20,6 +20,13 @@ a {
   color: black;
 }
 
+.picto__back {
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+.picto__back:hover {
+  color: #98e2cf;
+}
 @media screen and (min-width: 762px) {
   .picto__location {
     font-size: 1.2rem;
@@ -39,10 +46,12 @@ a {
   -webkit-text-fill-color: white;
   -webkit-text-stroke-color: black;
   -webkit-text-stroke-width: 2px;
+  transform: scale(1);
 }
 .picto__desc:hover, .picto__menu:hover {
   -webkit-text-fill-color: #9256dc;
   -webkit-text-stroke-color: #9256dc;
+  animation: heart 500ms ease-in-out;
 }
 .picto__desc:active, .picto__menu:active {
   -webkit-text-fill-color: #9256dc;
@@ -51,6 +60,11 @@ a {
 @media screen and (min-width: 762px) {
   .picto__desc, .picto__menu {
     font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 1220px) {
+  .picto__desc {
+    align-self: end;
   }
 }
 .picto__check {
@@ -62,6 +76,17 @@ a {
   margin-right: 1rem;
 }
 
+@keyframes heart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .title__1 {
   font-family: "Shrikhand", cursive;
   font-size: 1.5rem;
@@ -128,10 +153,19 @@ a {
 }
 
 .button {
-  padding: 1.15rem 1.35rem;
-  border-radius: 3rem;
   border: none;
-  background: linear-gradient(0deg, #9256dc 0%, #e4d5f6 100%);
+  border-radius: 20px;
+  width: 180px;
+  height: 40px;
+  padding: 5px 15px;
+  cursor: pointer;
+  background: linear-gradient(to top left, #9256dc, 35%, #ff7ad9);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.219);
+  transition: all 500ms;
+}
+.button:hover, .button:active {
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.219);
+  opacity: 0.9;
 }
 .button a {
   font-family: "Roboto", sans-serif;
@@ -150,7 +184,7 @@ header {
   align-items: center;
   height: 4rem;
   box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.26);
-  z-index: 1000;
+  z-index: 100;
   /* left arrow*/
 }
 @media screen and (min-width: 762px) {
@@ -247,74 +281,8 @@ footer .logo {
   }
 }
 
-/************************animation **************************/
-/*******  only loader **************/
-@keyframes tempory {
-  1% {
-    cursor: wait;
-    overflow-y: hidden;
-    opacity: 0;
-    pointer-events: none;
-  }
-  100% {
-    cursor: wait;
-    overflow-y: hidden;
-    opacity: 0;
-    pointer-events: none;
-  }
-}
-@keyframes scroll-hidden {
-  1% {
-    overflow-y: hidden;
-    cursor: wait;
-  }
-  100% {
-    overflow-y: hidden;
-    cursor: wait;
-  }
-}
-/********load card ********/
-@keyframes load {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  25% {
-    opacity: 0.25;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  75% {
-    opacity: 0.75;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-/********check card ********/
-@keyframes check {
-  0% {
-    transform: translateX(50px);
-    opacity: 0;
-  }
-  25% {
-    opacity: 0.25;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  75% {
-    opacity: 0.75;
-  }
-  100% {
-    transform: translateX(1px);
-    opacity: 1;
-  }
-}
 .loader {
-  z-index: 11000;
+  z-index: 200;
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -323,7 +291,6 @@ footer .logo {
   cursor: wait;
   animation: hide 3s both;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: white;
@@ -335,31 +302,7 @@ footer .logo {
   border-radius: 50%;
   width: 110px;
   height: 110px;
-  animation: spin 2s linear infinite;
-}
-.loader__text {
-  width: 150px;
-  position: relative;
-  z-index: 120;
-  left: 35px;
-  bottom: 75px;
-  font-size: x-large;
-  font-weight: bolder;
-  background: #9256dc;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-.loader__text .flash {
-  color: #9256dc;
-  opacity: 1;
-  animation: flash 0.8s infinite;
-}
-.loader__text .flash--2 {
-  animation-delay: 0.1s;
-}
-.loader__text .flash--3 {
-  animation-delay: 0.2s;
+  animation: spin 1s ease-in-out infinite;
 }
 
 @keyframes spin {
@@ -377,17 +320,6 @@ footer .logo {
   }
   100% {
     transform: scale(1);
-  }
-}
-@keyframes flash {
-  0% {
-    opacity: 1;
-  }
-  40% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 .place {
@@ -631,10 +563,6 @@ footer .logo {
   }
 }
 
-.desc__picto {
-  align-self: end;
-}
-
 .background-pic {
   background-image: url(/public/images/restaurants/La_palette_du_Gout.jpg);
   height: 40vh;
@@ -770,40 +698,40 @@ footer .logo {
   }
 }
 .fade__1 {
-  animation: fadein 2000ms;
-}
-.fade__2 {
-  animation: fadein 2500ms;
-}
-.fade__3 {
   animation: fadein 3000ms;
 }
-.fade__4 {
+.fade__2 {
   animation: fadein 3500ms;
 }
-.fade__5 {
+.fade__3 {
   animation: fadein 4000ms;
 }
-.fade__6 {
+.fade__4 {
   animation: fadein 4500ms;
 }
-.fade__7 {
+.fade__5 {
   animation: fadein 5000ms;
 }
-.fade__8 {
+.fade__6 {
   animation: fadein 5500ms;
 }
-.fade__9 {
+.fade__7 {
   animation: fadein 6000ms;
 }
-.fade__10 {
+.fade__8 {
   animation: fadein 6500ms;
 }
-.fade__11 {
+.fade__9 {
   animation: fadein 7000ms;
 }
-.fade__12 {
+.fade__10 {
   animation: fadein 7500ms;
+}
+.fade__11 {
+  animation: fadein 8000ms;
+}
+.fade__12 {
+  animation: fadein 8500ms;
 }
 
 @keyframes fadein {

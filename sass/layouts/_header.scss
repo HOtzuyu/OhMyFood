@@ -9,7 +9,7 @@ header {
     align-items: center;
     height: map-get($header-height, mobile);
     box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.26);
-    z-index: 1000;
+    z-index: 100;
     @include mobile-first{
         height: map-get($header-height, tablette);
     }

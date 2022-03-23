@@ -1,10 +1,6 @@
 .button{
-    padding: 1.15rem 1.35rem;
-    border-radius: 3rem;
-    border: none;
-    background: $colour-gradiant;
+    @include btn;    
     & a{
         @include fonts(text-2);
-    }
-    
+    }    
 }

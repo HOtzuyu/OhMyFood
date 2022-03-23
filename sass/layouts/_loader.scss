@@ -1,139 +1,13 @@
-/************************animation **************************/
-$nbr-field: 4;
-/*******  only loader **************/
-
-@mixin bool($loader: false) {
-  @if $loader {
-    cursor: wait;
-    overflow-y: hidden;
-    opacity: 0;
-  }
-
-}
-
-@mixin event($event : false) {
-  @if $event {
-    pointer-events: none;
-  }
-}
-
-@mixin scroll($scroll : false) {
-  @if $scroll {
-    overflow-y: hidden;
-    cursor: wait;
-  }
-}
-
-@mixin animate-loader {
-  animation: tempory 3s ease-in-out;
-}
-
-
-
-@keyframes tempory {
-  0% {
-    @include bool($loader:false);
-    @include event($event:false);
-  }
-
-  1% {
-    @include bool($loader:true);
-    @include event($event:true);
-  }
-
-  100% {
-    @include bool($loader:true);
-    @include event($event:true);
-  }
-}
-
-@keyframes scroll-hidden {
-  0% {
-    @include scroll($scroll:false);
-  }
-
-  1% {
-    @include scroll($scroll:true);
-  }
-
-  100% {
-    @include scroll($scroll:true);
-  }
-}
-
-/********load card ********/
-@keyframes load {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-
-  25% {
-    opacity: 0.25;
-  }
-
-  50% {
-    opacity: 0.5;
-  }
-
-  75% {
-    opacity: 0.75;
-  }
-
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-
-@mixin animation-load {
-  animation: load 1.2s ease-out both;
-
-  @for $i from 1 through $nbr-field {
-    &--#{$i} {
-      $nbr: calc($i / 5);
-      animation-delay: $nbr+s;
-    }
-  }
-}
-
-/********check card ********/
-@keyframes check {
-  0% {
-    transform: translateX(50px);
-    opacity: 0;
-  }
-
-  25% {
-    opacity: 0.25;
-  }
-
-  50% {
-    opacity: 0.5;
-  }
-
-  75% {
-    opacity: 0.75;
-  }
-
-  100% {
-    transform: translateX(1px);
-    opacity: 1;
-
-  }
-}
-
 .loader {
-  z-index: 11000;
+  z-index: 200;
   width: 100%;
   height: 100vh;
-  position: fixed;  
+  position: fixed;
   transform: scale(0);
   visibility: hidden;
   cursor: wait;
   animation: hide 3s both;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: $colour-white;
@@ -145,42 +19,9 @@ $nbr-field: 4;
     border-radius: 50%;
     width: 110px;
     height: 110px;
-    animation: spin 2s linear infinite;
-
+    animation: spin 1s ease-in-out infinite;
   }
-
-  &__text {
-    width: 150px;
-    position: relative;
-    z-index: 120;
-    left: 35px;
-    bottom: 75px;
-    font-size: x-large;
-    font-weight: bolder;
-    background: $colour-primary;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-
-    .flash {
-      color: $colour-primary;
-      opacity: 1;
-      animation: flash 0.8s infinite;
-
-      &--2 {
-        animation-delay: 0.1s;
-      }
-
-      &--3 {
-        animation-delay: 0.2s;
-      }
-    }
-
-  }
-
 }
-
-
 
 @keyframes spin {
   0% {
@@ -204,17 +45,3 @@ $nbr-field: 4;
 }
 
 
-
-@keyframes flash {
-  0% {
-    opacity: 1;
-  }
-
-  40% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}

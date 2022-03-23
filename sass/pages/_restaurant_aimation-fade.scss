@@ -1,45 +1,46 @@
 .fade{
     &__1{
-        animation: fadein 2000ms;
-    }
-    &__2{
-        animation: fadein 2500ms;
-    }
-    &__3{
         animation: fadein 3000ms;
     }
-    &__4{
+    &__2{
         animation: fadein 3500ms;
     }
-    &__5{
+    &__3{
         animation: fadein 4000ms;
     }
-    &__6{
+    &__4{
         animation: fadein 4500ms;
     }
-    &__7{
+    &__5{
         animation: fadein 5000ms;
     }
-    &__8{
+    &__6{
         animation: fadein 5500ms;
     }
-    &__9{
+    &__7{
         animation: fadein 6000ms;
     }
-    &__10{
+    &__8{
         animation: fadein 6500ms;
     }
-    &__11{
+    &__9{
         animation: fadein 7000ms;
     }
-    &__12{
+    &__10{
         animation: fadein 7500ms;
+    }
+    &__11{
+        animation: fadein 8000ms;
+    }
+    &__12{
+        animation: fadein 8500ms;
     }
 }
 
 @keyframes fadein {
     from {
         opacity:0;
+        
     }
     to {
         opacity:1;

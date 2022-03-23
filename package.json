@@ -1,7 +1,6 @@
 {
   "name": "ohmyfood",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
@@ -20,5 +19,6 @@
   "dependencies": {
     "node-sass": "^7.0.1"
   },
-  "browserlist": "last 4 versions"
+  "browserlist": "last 4 versions",
+  "description": ""  
 }
