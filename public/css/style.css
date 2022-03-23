@@ -247,22 +247,147 @@ footer .logo {
   }
 }
 
-.loader {
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  position: fixed;
-  z-index: 10000;
-  display: block;
-  animation: back 1000ms linear;
-}
-
-@keyframes back {
-  0% {
-    display: block;
+/************************animation **************************/
+/*******  only loader **************/
+@keyframes tempory {
+  1% {
+    cursor: wait;
+    overflow-y: hidden;
+    opacity: 0;
+    pointer-events: none;
   }
   100% {
-    display: none;
+    cursor: wait;
+    overflow-y: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+@keyframes scroll-hidden {
+  1% {
+    overflow-y: hidden;
+    cursor: wait;
+  }
+  100% {
+    overflow-y: hidden;
+    cursor: wait;
+  }
+}
+/********load card ********/
+@keyframes load {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+/********check card ********/
+@keyframes check {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateX(1px);
+    opacity: 1;
+  }
+}
+.loader {
+  z-index: 11000;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  transform: scale(0);
+  visibility: hidden;
+  cursor: wait;
+  animation: hide 3s both;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.loader__circle {
+  border: 5px solid #9256dc;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-radius: 50%;
+  width: 110px;
+  height: 110px;
+  animation: spin 2s linear infinite;
+}
+.loader__text {
+  width: 150px;
+  position: relative;
+  z-index: 120;
+  left: 35px;
+  bottom: 75px;
+  font-size: x-large;
+  font-weight: bolder;
+  background: #9256dc;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.loader__text .flash {
+  color: #9256dc;
+  opacity: 1;
+  animation: flash 0.8s infinite;
+}
+.loader__text .flash--2 {
+  animation-delay: 0.1s;
+}
+.loader__text .flash--3 {
+  animation-delay: 0.2s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes hide {
+  0% {
+    transform: scale(1);
+    visibility: visible;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 .place {
