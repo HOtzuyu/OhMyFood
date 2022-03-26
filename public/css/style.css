@@ -155,9 +155,7 @@ a {
 .button {
   border: none;
   border-radius: 20px;
-  width: 180px;
-  height: 40px;
-  padding: 5px 15px;
+  padding: 10px 20px;
   cursor: pointer;
   background: linear-gradient(to top left, #9256dc, 35%, #ff7ad9);
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.219);
