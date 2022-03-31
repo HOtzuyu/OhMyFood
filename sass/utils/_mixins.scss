@@ -28,7 +28,7 @@
     }
 
     @else {
-        $colour: 95%;
+        $colour: 98%;
     }
 
     background-color: hsl(165, 56%, $colour);
@@ -40,7 +40,7 @@
     }
 
     @else {
-        $colour: 80%;
+        $colour: 93%;
     }
 
     background-color: hsl(267, 66%, $colour);
@@ -51,11 +51,11 @@
 //medium color
 @mixin bg-medium($colour: $colour-tertiary) {
     @if (lightness($colour) < 25%) {
-        $colour: 24%;
+        $colour: 90%;
     }
 
     @else {
-        $colour: 80%;
+        $colour: 90%;
     }
 
     background-color: hsl(165, 56%, $colour);
